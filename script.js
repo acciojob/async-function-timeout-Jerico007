@@ -23,6 +23,7 @@ function getMessage(){
   let x = prom.then((data)=>{
 		return data;
 	});
+	
 
 	return x;
 }
