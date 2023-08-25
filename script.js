@@ -4,15 +4,15 @@ let text = "";
 let delay = 0;
 
 let	btn  = document.getElementById("btn");
- btn.addEventListener("click" , async function Resolve(){
+ btn.addEventListener("click" , Resolve);
+
+
+async function Resolve(){
 	text  = document.getElementById("text").value;
-	
 	delay = Number(document.getElementById("delay").value);
-	 document.getElementById("output").innerHTML = "";
 	let ans = await getMessage();
 	 document.getElementById("output").innerHTML = ans;
-});
-
+}
 
 function getMessage(){
 	let prom = new Promise((resolve)=>{
